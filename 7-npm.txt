@@ -1,0 +1,24 @@
+-> npm i redis
+
+# JS code
+const DEFAULT_EXPIRATION = 3600;
+
+const RedisClient = require('redis');
+
+app.get('/photos', async(req, res) => {
+    const { albumId } = req.query;
+    RedisClient.get('photos?albumId={albumId}', async (err, photos) => {
+        if (error) console.error(err);
+        if(photos != null){
+            console.log("Cache Hit!");
+            return res.json(JSON.parse(photos))
+        } else {
+            console.log("Cache Miss!");
+            const {data} = await axios.get("https://jsonplaceholder.typicode.com/photos", {
+                params: { albumId }
+            });
+            RedisClient.setex('photos?albumId={albumId}', DEFAULT_EXPIRATION, JSON.stringify(data));
+            return res.json(JSON.parse(photos))
+        }
+    });
+});

@@ -1,0 +1,22 @@
+# Hash - key value pair inside a key value pair
+
+# Set a key value pair for a key
+-> HSET person name ruthvik
+
+# Get the value
+-> HGET person name
+
+-> HGETALL person
+
+-> HSET person age 23
+
+-> HGET person age
+ 
+-> HGETALL person
+
+# Deleting a key
+-> HDEL person age
+
+# To check if a key exists (0 or 1)
+-> HEXISTS person name
+

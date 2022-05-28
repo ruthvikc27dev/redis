@@ -1,0 +1,10 @@
+# OS - Ubuntu
+sudo apt update
+sudo apt upgrade
+sudo apt install redis -y
+
+# To start
+redis-server
+
+# To enter redis command line
+redis-cli

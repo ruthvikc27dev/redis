@@ -1,0 +1,12 @@
+
+# set is list where every values is unique
+
+# Adding value to set hobbies
+-> SADD hobbies "weight lifting"
+
+# Getting all values in the set hobbies
+-> SMEMBERS hobbies
+
+# Removing a value in the set
+-> SREM hobbies "weight lifting"
+

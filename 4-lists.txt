@@ -1,0 +1,20 @@
+
+# To push a value to list key
+-> lpush friends boga 
+-> lpush friends ravi yathish
+
+# To get all the values of a list
+-> lrange friends 0 -1
+
+# To push value at the beginning
+-> lpush friends john
+
+# To push value at the end
+-> rpush friends mike
+
+# To remove the first value in the list
+-> lpop friends
+
+# To remove last item in the list
+-> rpop friends
+

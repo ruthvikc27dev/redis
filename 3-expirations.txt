@@ -1,0 +1,9 @@
+# To check for an expiration of a key
+-> ttl name
+# if < 0, then no expiration
+
+# To set expiration (10 seconds) for a already defined key
+-> expire name 10
+
+# To set expiration (10 seconds) for a new key
+-> setex name 10 ruthvik

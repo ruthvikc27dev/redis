@@ -1,0 +1,26 @@
+
+# Sets the key "name" to value "ruthvik"
+# Always stores the value as the string
+-> set name ruthvik
+-> set age 26
+
+# To retrieve a key value
+-> get name
+-> get age
+
+# To delete a key
+-> del name
+-> del age
+
+# To check a key exists or not
+-> exists name
+# prints 0 (false) or 1 (true)
+
+# To print all the keys
+-> keys *
+
+# To remove all the keys
+-> flushall
+
+# To clear the previous commands
+-> clear

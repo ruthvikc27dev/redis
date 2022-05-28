@@ -1,0 +1,8 @@
+Cache Hit - 
+When information is available in the Redis server during the request, then it is Cache Hit.
+
+Cache Miss -
+When information is not able to be retrieved from the Redis server during a request, then it is a Cache Miss.
+
+Cache Churn -
+A lot of the data that will be never read.
